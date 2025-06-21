@@ -1,6 +1,5 @@
 ---
-layout: default
-title: "home"
+layout: home
+title: Home
+description: "Welcome to Sustainability Mind"
 ---
-
-Welcome to Sustainability Mind!
