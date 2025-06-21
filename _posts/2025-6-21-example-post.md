@@ -1,7 +1,7 @@
 ---
-layout: post
 title: "How Minimalism Helps Sustainability"
 date: 2025-06-21
+layout: post
 author: GreenMind
 github_url: https://github.com/Eru078/sustainability-blog/blob/main/_posts/2025-06-21-example-post.md
 ---
