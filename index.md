@@ -1,7 +1,6 @@
 ---
-layout: home
-title: "Welcome to Sustainability Mind"
-description: "Explore simple tips, deeper thinking, and actionable habits for a greener life."
+layout: default
+title: home
 ---
 
-<!-- The actual content goes here if needed -->
+Welcome to Sustainability Mind!
