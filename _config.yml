@@ -9,7 +9,7 @@ permalink: /:categories/:title/
 
 # Markdown and theme settings
 markdown: kramdown
-theme: minima
+theme: null
 
 # Enable post collections
 collections:
