@@ -1,6 +1,6 @@
 ---
 layout: default
-title: home
+title: "home"
 ---
 
 Welcome to Sustainability Mind!
