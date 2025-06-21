@@ -9,6 +9,14 @@ layout: default
   </div>
 </section>
 
+{% for post in site.posts %}
+  <article>
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p>{{ post.excerpt }}</p>
+  </article>
+{% endfor %}
+
+
 <section class="navigation-boxes">
   <div class="container nav-grid">
     {% for link in site.data.navigation %}
