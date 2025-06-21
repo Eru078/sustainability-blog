@@ -39,8 +39,9 @@ layout: default
       const sha = commit.sha;
       const diffUrl = `https://github.com/${repo}/commit/${sha}`;
 
-      document.getElementById("github-last-update").innerHTML =
-        `🔄 Last updated: ${formatted}`;
+     document.getElementById("github-last-update").innerHTML =
+  `🔄 Last updated: <a href="${diffUrl}" target="_blank">${formatted}</a>`;
+
     })
     .catch(() => {
       document.getElementById("github-last-update").innerText = "Update info unavailable.";
