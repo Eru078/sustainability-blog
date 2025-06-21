@@ -1,0 +1,19 @@
+title: "Sustainability Mind"
+description: "Sustainable thoughts, tips, and philosophies for mindful living."
+author: "GreenMind"
+baseurl: "/sustainability-blog" # GitHub Pages repo name
+url: "https://yourusername.github.io"
+
+# For navigation + future use
+permalink: /:categories/:title/
+
+# Markdown and theme settings
+markdown: kramdown
+theme: minima # or blank for custom
+
+# Enable post collections
+collections:
+  posts:
+    output: true
+
+github_repo: yourusername/sustainability-blog

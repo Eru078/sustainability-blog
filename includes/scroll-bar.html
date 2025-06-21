@@ -1,0 +1,22 @@
+<div id="scrollProgressBar"></div>
+
+<script>
+  window.onscroll = function() {
+    const bar = document.getElementById("scrollProgressBar");
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / height) * 100;
+    bar.style.width = scrolled + "%";
+  };
+</script>
+
+<style>
+  #scrollProgressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: #4CAF50;
+    z-index: 9999;
+  }
+</style>

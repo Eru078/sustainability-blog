@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<article class="post container">
+  <header>
+    <h1>{{ page.title }}</h1>
+    <p class="meta">
+      🗓 Created: {{ page.date | date: "%B %d, %Y" }}
+      {% if page.author %} · ✍️ {{ page.author }}{% endif %}
+    </p>
+
+    <div class="meta-extras">
+      <span id="github-last-update">Fetching last update...</span> ·
+      <a href="javascript:window.print()">🖨️ Print</a> ·
+      <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url }}" target="_blank">🔗 Share</a>
+    </div>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+</article>
+
+<script>
+  const filePath = "{{ page.path }}";
+  const repo = "{{ site.github_repo }}";
+  const apiUrl = "https://api.github.com/repos/yourusername/sustainability-blog/commits?path=" + filePath;
+
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      const commit = data[0];
+      const date = new Date(commit.commit.committer.date);
+      const formatted = date.toLocaleString(undefined, {
+        year: 'numeric', month: 'long', day: 'numeric',
+        hour: '2-digit', minute: '2-digit', second: '2-digit'
+      });
+      const sha = commit.sha;
+      const diffUrl = `https://github.com/${repo}/commit/${sha}`;
+
+      document.getElementById("github-last-update").innerHTML =
+        `🔄 Last updated: ${formatted}`;
+    })
+    .catch(() => {
+      document.getElementById("github-last-update").innerText = "Update info unavailable.";
+    });
+</script>

@@ -1,0 +1,15 @@
+- name: Blog
+  url: /blog/
+  description: Latest thoughts & reflections
+
+- name: Articles
+  url: /articles/
+  description: In-depth explorations
+
+- name: Tips
+  url: /tips/
+  description: Simple, actionable habits
+
+- name: Philosophy
+  url: /philosophy/
+  description: Mindful sustainability thinking

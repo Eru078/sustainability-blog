@@ -1,0 +1,27 @@
+<button id="backToTop" title="Go to top">↑</button>
+
+<script>
+  const btn = document.getElementById("backToTop");
+  window.onscroll = function() {
+    btn.style.display = (window.scrollY > 300) ? "block" : "none";
+  };
+  btn.onclick = function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+</script>
+
+<style>
+  #backToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    padding: 10px;
+    font-size: 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>

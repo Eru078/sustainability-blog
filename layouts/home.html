@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<section class="welcome">
+  <div class="container">
+    <h2>Welcome 🌿</h2>
+    <p>{{ page.description }}</p>
+  </div>
+</section>
+
+<section class="navigation-boxes">
+  <div class="container nav-grid">
+    {% for link in site.data.navigation %}
+      <a class="nav-box" href="{{ link.url | relative_url }}">
+        <h3>{{ link.name }}</h3>
+        <p>{{ link.description }}</p>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="announcements">
+  <div class="container">
+    <h2>📢 Announcements</h2>
+    <ul>
+      {% for item in site.data.announcements %}
+        <li><strong>{{ item.date }}</strong>: {{ item.message }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="recent-posts">
+  <div class="container">
+    <h2>📝 Recent Posts</h2>
+    <ul>
+      {% for post in site.posts limit:5 %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
