@@ -25,7 +25,7 @@ layout: default
 <script>
   const filePath = "{{ page.path }}";
   const repo = "{{ site.github_repo }}";
-  const apiUrl = "https://api.github.com/repos/Eru078/sustainabilty-blog/commits?path=" + filePath;
+  const apiUrl = "https://api.github.com/repos/Eru078/sustainability-blog/commits?path=" + filePath;
 
   fetch(apiUrl)
     .then(response => response.json())
