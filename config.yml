@@ -2,7 +2,7 @@ title: "Sustainability Mind"
 description: "Sustainable thoughts, tips, and philosophies for mindful living."
 author: "GreenMind"
 baseurl: "/sustainability-blog" # GitHub Pages repo name
-url: "https://eru078.github.io/sustainibilty-blog"
+url: "https://eru078.github.io/sustainabilty-blog"
 
 # For navigation + future use
 permalink: /:categories/:title/
@@ -16,4 +16,4 @@ collections:
   posts:
     output: true
 
-github_repo: Eru078/sustainibilty-blog
+github_repo: Eru078/sustainabilty-blog
